@@ -1,0 +1,24 @@
+lein repl (para abrir o Leiningen):
+
+user=> (+ 2 4)
+6
+user=> (+ 1 2)
+3
+user=> (def idade 29) //idade guarda o valor 30, mas em programação funcional ela não varia de valor
+#'user/idade
+user=> idade
+29
+user=> (+ idade 2)
+31
+user=> idade
+29
+user=> exit
+Bye for now!
+
+Criando uma aplicação com Leiningen:
+
+C:\Users>lein new app forca
+Generating a project called forca based on the 'app' template
+
+
+
