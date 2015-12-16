@@ -2,6 +2,11 @@
 
 FIXME: description
 
+## Leiningen
+
+http://leiningen.org/
+http://leiningen-win-installer.djpowell.net/
+
 ## Installation
 
 Download from http://example.com/FIXME.
