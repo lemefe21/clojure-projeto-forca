@@ -110,7 +110,7 @@ forca.core=> nums - variaveis não variam
 [1 2 3 4 5]
 forca.core=> conjunto
 #{"L" "M" "A"}
-forca.core=> (conj conjunto "X")
+forca.core=> (conj conjunto "X") >> função conj add no conjunto
 #{"L" "M" "X" "A"}
 forca.core=> (disj conjunto "L")
 #{"M" "A"}
@@ -163,3 +163,32 @@ forca.core=> (forca/jogo 5 "JAVA" #{"J" "A"})
 Chuta!nil
 forca.core=> (forca/jogo 5 "JAVA" #{"J" "A" "V"})
 Voce ganhou!nil
+
+
+Utiliza o ambiente da JVM:
+função do Java
+
+	(.contains palavra chute)
+
+
+Lendo do teclado:
+
+forca.core=> (forca/jogo 3 "LARANJA" #{})
+Z
+A
+D
+C
+Voce perdeu...nil
+forca.core=> (forca/jogo 3 "LARANJA" #{})
+A
+L
+R
+N
+J
+Voce ganhou!!!nil
+
+
+Pega uma letra do teclado e converte para Integer:
+
+	(* 7 (Integer/parseInt (le-letra!)))
+
