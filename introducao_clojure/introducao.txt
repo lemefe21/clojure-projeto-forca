@@ -192,3 +192,9 @@ Pega uma letra do teclado e converte para Integer:
 
 	(* 7 (Integer/parseInt (le-letra!)))
 
+
+O let abre um novo escopo.
+
+A palavra recur é usada para a recursão de cauda.
+Evitar o empilhamento comum em recursão.
+
