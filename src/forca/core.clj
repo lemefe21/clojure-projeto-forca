@@ -38,18 +38,18 @@
 (defn fibonacci [n]
 	(if (= n 0) 0
 		(if (= n 1) 1
-			(+ (fibonacci (- n 1)) (fibonacci (- n 2)) )
-		)
-	)
-)
+			(+ (fibonacci (- n 1)) (fibonacci (- n 2))))))
 
 (defn fib [x]
 	(loop [a 1 b 1 numero 2]
 		(if
 			(= numero x) b
-			(recur b (+ a b) (inc numero))
-		)
-	))
+			(recur b (+ a b) (inc numero)))))
+
+(defn soma [n]
+	(loop [contador 1 soma 0]
+		(if (> contador n) soma
+		(recur (inc contador) (+ soma contador)))))
 
 (defn -main
   "I don't do a whole lot ... yet."
