@@ -43,6 +43,14 @@
 	)
 )
 
+(defn fib [x]
+	(loop [a 1 b 1 numero 2]
+		(if
+			(= numero x) b
+			(recur b (+ a b) (inc numero))
+		)
+	))
+
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
