@@ -200,3 +200,20 @@ Evitar o empilhamento comum em recursão.
 
 o inc significa incremento (++), exp: (inc contador)
 
+
+Função preguiçosa:
+
+	(defn imprime-forca [vidas palavra acertos]
+		(println "Vidas: " vidas)
+		(doseq [letra (seq palavra)]
+			(if (contains? acertos (str letra))
+				(print letra " ")
+				(print "_" " ")))
+		(println))
+
+Imprime a quantidade de vidas restantes, para cada letra da palavra ele verifica
+de a letra está em no array "acertos - #{ }", se estiver é impresso a letra e um
+espaço, se não é impresso um undercore e espaço.
+
+
+
