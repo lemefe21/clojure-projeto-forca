@@ -213,7 +213,7 @@ Função preguiçosa:
 
 Imprime a quantidade de vidas restantes, para cada letra da palavra ele verifica
 de a letra está em no array "acertos - #{ }", se estiver é impresso a letra e um
-espaço, se não é impresso um undercore e espaço.
+espaço, se não é impresso um underscore e espaço.
 
 
 
