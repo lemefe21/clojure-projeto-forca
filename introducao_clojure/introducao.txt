@@ -194,11 +194,11 @@ Pega uma letra do teclado e converte para Integer:
 
 
 O let abre um novo escopo.
-
 A palavra recur é usada para a recursão de cauda.
-Evitar o empilhamento comum em recursão.
+	- Evitar o empilhamento comum em recursão.
 
-o inc significa incremento (++), exp: (inc contador)
+o "inc" significa incremento (++) lembrando que a "variavel" incrementada
+não tem o seu valor alterado, exp: (inc contador)
 
 
 Função preguiçosa:
@@ -211,9 +211,23 @@ Função preguiçosa:
 				(print "_" " ")))
 		(println))
 
-Imprime a quantidade de vidas restantes, para cada letra da palavra ele verifica
-de a letra está em no array "acertos - #{ }", se estiver é impresso a letra e um
-espaço, se não é impresso um underscore e espaço.
+Imprime a quantidade de vidas restantes, para cada letra da palavra "loop - (doseq)" 
+ele verifica de a letra está em no array "acertos - #{ }", se estiver é impresso a 
+letra e um espaço, se não é impresso um underscore e espaço.
+
+Isso acontece porque em linguagens funcionais existe o conceito de função preguiçosa, 
+a qual não é executada até ser pedido seu resultado.
 
 
+Empacotando:
 
+	(def palavra-secreta "ALURA")
+
+	(defn comeca-o-jogo [] (jogo total-de-vidas palavra-secreta #{}))
+
+	(defn -main [& args]
+		(comeca-o-jogo))
+
+C:\Leme\ProjetosJava\Alura\Clojure\forca>lein run
+Vidas:  6
+_  _  _  _  _

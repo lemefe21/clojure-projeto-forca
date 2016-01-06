@@ -3,6 +3,7 @@
 
 
 (def total-de-vidas 6)
+(def palavra-secreta "ALURA")
 
 (defn perdeu [] (print "Voce perdeu..."))
 (defn ganhou [] (print "Voce ganhou!!!"))
@@ -40,6 +41,7 @@
 					(println "Errou a letra... Perdeu uma vida!")
 					(recur (dec vidas) palavra acertos))))))
 
+(defn comeca-o-jogo [] (jogo total-de-vidas palavra-secreta #{}))
 
 (defn fibonacci [n]
 	(if (= n 0) 0
@@ -57,7 +59,5 @@
 		(if (> contador n) soma
 		(recur (inc contador) (+ soma contador)))))
 
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (println "Hello, World!"))
+(defn -main [& args]
+	(comeca-o-jogo))

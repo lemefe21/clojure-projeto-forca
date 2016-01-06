@@ -1,0 +1,42 @@
+Processamento de Listas em Sequência:
+
+	(def carros [50000.0, 60000,0])
+
+Lista de carros com dois valores.
+O map realiza algo e devolve uma nova lista.
+Função que multiplica os elementos da lista por 2.
+O reduce pega todos os elementos da lista e transforma em somente um elemento.
+Recebe dois valores na função, o acumulador e o valor corrente.
+Conceito MapReduce (espalha e junta).
+O atalho da sintaxe "->>" passa o array por varias funções, processamento de listas em sequência.
+
+	lein repl
+	forca.core=> (def carros [50000.0, 60000.0])
+	#'forca.core/carros
+	forca.core=> carros
+	[50000.0 60000.0]
+	forca.core=> (map (fn [x] (* x 2)) carros)
+	(100000.0 120000.0)
+	forca.core=> (reduce (fn [acc n] (+ acc n)) carros)
+	110000.0
+	forca.core=> (->> carros (map (fn [x] (+ x 2))) (reduce (fn [acc n] (+ acc n))))
+	220000.0
+	forca.core=> (->> carros (map (fn [x] (* x 2))) (map (fn [x] (* x 3))) (reduce (fn [acc n] (+ acc n))))
+	660000.0
+
+Subtrair 200 de cada carro sem usar o "->>"
+
+	forca.core=> (reduce (fn [acc n] (+ acc n)) (map (fn [x] (- x 200)) carros))
+	109600.0
+
+Utilizando o "->>"
+
+	forca.core=> (->> carros (map (fn [x] (- x 200))) (reduce (fn [acc n] (+ acc n))))
+	109600.0
+
+Em um documento Clojure:
+
+	(->> carros 
+		(map (fn [x] (* x 2)))
+		(map (fn [x] (* x 3)))
+		(reduce (fn [acc n] (+ acc n))))
