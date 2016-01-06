@@ -231,3 +231,7 @@ Empacotando:
 C:\Leme\ProjetosJava\Alura\Clojure\forca>lein run
 Vidas:  6
 _  _  _  _  _
+
+Para gerar o .jar
+C:\Leme\ProjetosJava\Alura\Clojure\forca>lein uberjar
+	
